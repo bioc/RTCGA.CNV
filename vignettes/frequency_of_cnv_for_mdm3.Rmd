@@ -19,8 +19,9 @@ opts_chunk$set(comment="", message=FALSE, warning = FALSE, tidy.opts=list(keep.b
 You need RTCGA.cnv package to use CNV scores.
 
 ```{r}
-source("https://bioconductor.org/biocLite.R")
-biocLite("RTCGA.cnv")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("RTCGA.cnv")
 ```
 
 
